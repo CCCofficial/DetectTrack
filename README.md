@@ -7,7 +7,7 @@ Called by Detect.py to track objects by matching each object in the current fram
 ## Common.py 
 Contains all the constants used by the programs (Detect.py and Track.py)
 ## detectImageGUI.py
-GUI to detect objects in directory of images
+GUI to detect objects in images in a directory
 ## detectVideoGUI.py
 GUI to detect objects from frames of a video
 ## trackOutput.csv
