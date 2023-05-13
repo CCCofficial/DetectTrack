@@ -6,6 +6,10 @@ Contains the function detectTrackFeature(C.VID_FILE_NAME,C.THRESH) that you call
 Called by Detect.py to track objects by matching each object in the current frame with the closest object in the past frame. Objects in the current frame that were not matched are given new ID numbers.
 ## Common.py 
 Contains all the constants used by the programs (Detect.py and Track.py)
+## detectImageGUI.py
+GUI to detect objects in directory of images
+## detectVideoGUI.py
+GUI to detect objects from frames of a video
 ## trackOutput.csv
 An example of tracking output for the file blep_14sec.mp3
 ## blep_14sec.mp4
