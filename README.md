@@ -3,9 +3,9 @@ Detect and track multiple objects in video. Detects objects by removing backgrou
 ## Detect.py 
 Contains the function detectTrackFeature(C.VID_FILE_NAME,C.THRESH) that you call, proving a video and threshold level, defined in the file containing all the constants (Common.py). At the bottom of the code is a short test program that calls the detectTrackFeature() function. Disable this if you want to call this function from another module. Feature extraction is not included in this program so some columns of the trackOutput.csv will be zero. 
 ## Track.py
-Called by Detect_11.py to track objects by matching each object in the current frame with the closest object in the past frame. Objects in the current frame that were not matched are given new ID numbers.
+Called by Detect.py to track objects by matching each object in the current frame with the closest object in the past frame. Objects in the current frame that were not matched are given new ID numbers.
 ## Common.py 
-Contains all the constants used by the programs (Detect_11.py and Track_11.py)
+Contains all the constants used by the programs (Detect.py and Track.py)
 ## trackOutput.csv
 An example of tracking output for the file blep_14sec.mp3
 ## blep_14sec.mp4

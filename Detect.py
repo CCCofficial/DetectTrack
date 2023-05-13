@@ -4,10 +4,10 @@
 # This work is funded by the National Science Foundation (NSF) grant No. DBI-1548297 
 # Disclaimer:  Any opinions, findings and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.
 
-import Track_11 as T
+import Track as T
 import numpy as np
 import cv2
-import Common_11 as C
+import Common as C
 
 def checkROI(xMaxRez, yMaxRez, xx0, yy0, xx1, yy1):
     xx0 -= C.ENLARGE
