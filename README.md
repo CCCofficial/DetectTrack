@@ -16,7 +16,7 @@ An example of tracking output for the file blep_14sec.mp3
 A 14 second video (1920x1080) taken with a lensless microscope of multiple blepharisma swimming around to test detect and tracker.
 
 
-ACKNOWLEDGMENT 
-==============
+ACKNOWLEDGMENTS 
+===============
 Code written by Thomas G. Zimmerman, IBM Research-Almaden and Center for Cellular Construction, except detectImageGUI.py and detectVideoGUI.py written by Salma Ahmed, SFSU, and Thomas G. Zimmerman. This work is funded by the National Science Foundation (NSF) grant No. DBI-1548297, Center for Cellular Construction.
 Disclaimer:  Any opinions, findings and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation. 
