@@ -1,5 +1,5 @@
 # User defined files
-# V12 7/20/23 Added text to display tracking ID on bounding box of diplay image rectIM
+# V12 7/20/23 Added text to display tracking ID on bounding box of display image rectIM
 # V11 4/25/23
 # Thomas Zimmerman IBM Research-Almaden, Center for Cellular Construction (https://ccc.ucsf.edu/) 
 # This work is funded by the National Science Foundation (NSF) grant No. DBI-1548297 
