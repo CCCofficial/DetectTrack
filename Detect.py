@@ -1,4 +1,5 @@
 # Detect and Track objects to get location, features and ID
+# V12 7/20/23 Added text to display tracking ID on bounding box of diplay image rectIM
 # V11 4/25/23
 # Thomas Zimmerman IBM Research-Almaden, Center for Cellular Construction (https://ccc.ucsf.edu/) 
 # This work is funded by the National Science Foundation (NSF) grant No. DBI-1548297 
@@ -8,6 +9,14 @@ import Track as T
 import numpy as np
 import cv2
 import Common as C
+
+# set up text for displaying track id on tracking rectangle
+FONT = cv2.FONT_HERSHEY_SIMPLEX
+FONT_OFFSET_X = 10
+FONT_OFFSET_Y = 10
+FONT_SCALE = 2
+FONT_COLOR = (0,255,0) #GREEN
+FONT_THICKNESS = 2
 
 def checkROI(xMaxRez, yMaxRez, xx0, yy0, xx1, yy1):
     xx0 -= C.ENLARGE
@@ -85,7 +94,8 @@ def display(frameCount,rectIM,diffIM,threshIM,objectArray,begin0,end0,end1):
         y0 = int(objectArray[i, C.Y0])
         y1 = int(objectArray[i, C.Y1])
         match = objectArray[i, C.MATCH_STATUS]
-        #print(frameCount,i,x0,x1,y0,y1,match)
+        trackID = int(objectArray[i, C.TRACK_ID])
+        #print(frameCount,i,x0,x1,y0,y1,match,trackID)
         # make colors for display
         if match == C.GOOD_MATCH:    # Color of ID, good match
             cv2.rectangle(rectIM, (x0, y0), (x1, y1), (0, 255, 0), C.THICK)        # GREEN good match
@@ -109,6 +119,10 @@ def display(frameCount,rectIM,diffIM,threshIM,objectArray,begin0,end0,end1):
             cv2.rectangle(rectIM, (x0, y0), (x1, y1), (255, 255, 255), C.THICK)     # WHITE unknown areazero area
             if printError: 
                 print('Frame',frameCount,'i:',i,'Unknown Error')    
+                
+        # put trackID text on tracking bounding box
+        rectIM = cv2.putText(rectIM, str(trackID), (x1+C.FONT_OFFSET_X,y1+C.FONT_OFFSET_Y), C.FONT, C.FONT_SCALE, C.FONT_COLOR, C.FONT_THICKNESS, cv2.LINE_AA)
+        
         if match!=C.GOOD_MATCH: # pause to see error display
             anyError=1          # indicate a tracking error occured             
     #cv2.imshow('rectIM', cv2.resize(rectIM, C.DISPLAY_REZ))
@@ -212,6 +226,7 @@ def detectTrackFeature(VID, thresh):
     cap.release()
     cv2.destroyAllWindows()
     return(objectArray)
+
 
 ########## TEST ###########
 if True:

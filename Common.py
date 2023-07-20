@@ -1,9 +1,11 @@
 # User defined files
+# V12 7/20/23 Added text to display tracking ID on bounding box of diplay image rectIM
 # V11 4/25/23
 # Thomas Zimmerman IBM Research-Almaden, Center for Cellular Construction (https://ccc.ucsf.edu/) 
 # This work is funded by the National Science Foundation (NSF) grant No. DBI-1548297 
 # Disclaimer:  Any opinions, findings and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.
 
+import cv2 # for font
 
 # files
 VID_FILE_NAME = r'blep_14sec.mp4' # video you want to process
@@ -38,3 +40,10 @@ header='FRAME,TRACK_ID,MATCH_STATUS,ASSIGNED,TRACK_DISTANCE,DELTA_AREA,X0,Y0,X1,
 OBJ_ARRAY_COL=15 # used to create objectArray
 [FRAME,TRACK_ID,MATCH_STATUS,ASSIGNED,TRACK_DISTANCE,DELTA_AREA,X0,Y0,X1,Y1,XC,YC,AREA,SPEED,ASPECT_RATIO]=range(0,OBJ_ARRAY_COL)
 
+# Text to display tracking id next to bounding box
+FONT = cv2.FONT_HERSHEY_SIMPLEX
+FONT_OFFSET_X = 10
+FONT_OFFSET_Y = 10
+FONT_SCALE = 2
+FONT_COLOR = (0,255,0) #GREEN
+FONT_THICKNESS = 2
