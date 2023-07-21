@@ -19,7 +19,7 @@ BLUR=7
 
 MAX_FRAME = 999           # number of frames to process, if max frame is greater than framcount, read all the frames of the movie
 START_FRAME = 1
-PAUSE = 10                  # number of milliseconds between frame read, using waitKey(PAUSE) command
+PAUSE = 30                # number of milliseconds between frame read, using waitKey(PAUSE) command
 DEBUG = 1                 # shows detection and tracking frame-by-frame (but slows down processing)
 PROCESS_REZ = (1920,1080) # processing resolution, video frames reduced in size to speed up processing
 #DISPLAY_REZ = PROCESS_REZ     # display resolution
