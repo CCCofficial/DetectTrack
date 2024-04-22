@@ -14,7 +14,12 @@ GUI to detect objects from frames of a video
 An example of tracking output for the file blep_14sec.mp3
 ## blep_14sec.mp4
 A 14 second video (1920x1080) taken with a lensless microscope of multiple blepharisma swimming around to test detect and tracker.
-
+## CamTrackHolo.py
+"Cams" (short for "cameras") are windows that activly capture and track objects. 
+Cams persist, so when an object disappears due to falling below the detection threshold, they can be tracked if and when they reapper. 
+However, if they are gone for more than a max still count, the cam is released and available to track a new object.
+Image is blurred then a threshold is applied to binary quantize objects, then a threshold is applied.
+Tracking ID's are NOT saved
 
 ACKNOWLEDGMENTS 
 ===============
